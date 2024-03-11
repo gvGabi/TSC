@@ -1,0 +1,112 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ggrib/Desktop/TSC_LAB/lab2
+vinstr_register
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 DXx4 work 18 instr_register_pkg 0 22 e0nIhUXZ@TYchF]]TKzEX3
+!s110 1710142565
+!i10b 1
+!s100 m6U=AfJjO@CQdCl=mXG;C2
+I<CS5VQckm]BRIfWPm<@E>1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 instr_register_sv_unit
+S1
+Z3 dC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2
+w1710142423
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register.sv
+L0 9
+Z4 OW;L;10.5c;63
+r1
+!s85 0
+31
+Z5 !s108 1710142564.000000
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register.sv|
+!s101 -O0
+!i113 1
+Z6 o-work work -O0
+Z7 tCvgOpt 0
+Xinstr_register_pkg
+R0
+!s110 1710142564
+!i10b 1
+!s100 YGFHNjnGT2Ogjn0G9:HCP1
+Ie0nIhUXZ@TYchF]]TKzEX3
+Ve0nIhUXZ@TYchF]]TKzEX3
+S1
+R3
+w1710135277
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register_pkg.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register_pkg.sv
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register_pkg.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab_dut/instr_register_pkg.sv|
+!s101 -O0
+!i113 1
+R6
+R7
+vinstr_register_test
+R0
+R1
+!s110 1710142569
+!i10b 1
+!s100 QYBE3KQC:K7_AI;MTSKci3
+IeMGfXUmYcZaWK^eTbS2981
+R2
+!s105 instr_register_test_sv_unit
+S1
+R3
+w1710142162
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/instr_register_test.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/instr_register_test.sv
+L0 8
+R4
+r1
+!s85 0
+31
+!s108 1710142569.000000
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/instr_register_test.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/instr_register_test.sv|
+!s101 -O0
+!i113 1
+R6
+R7
+vtop
+R0
+R1
+!s110 1710142570
+!i10b 1
+!s100 K=;_B0j91iKzX;T43UMhk2
+IEgFND5KGn]mUf1RE`Y9;N1
+R2
+!s105 top_sv_unit
+S1
+R3
+w1709535819
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/top.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/top.sv
+L0 5
+R4
+r1
+!s85 0
+31
+!s108 1710142570.000000
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/top.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab2/lab01_testbench-interface/top.sv|
+!s101 -O0
+!i113 1
+R6
+R7
