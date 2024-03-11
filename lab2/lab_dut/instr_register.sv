@@ -30,7 +30,17 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
     end                                     // ' =indiferent de nr de biti; daca nu dam nicio valoare variabilelor, default = x
     else if (load_en) begin
       //case opcode, stocare intr o var noua rez, adaugare in structura, simulare opcode a si b + rez
-      iw_reg[write_pointer] = '{opcode,operand_a,operand_b};   
+      case(opcode)
+		    ZERO: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, 0}; //rezultatul este setat la 0
+        PASSA: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, operand_a}; //rezultatul este operandul A
+        PASSB: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, operand_b};//rezultatul este operandul B
+        ADD: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, operand_a + operand_b};
+        SUB: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, operand_a - operand_b};
+        MULT: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, operand_a * operand_b};
+        DIV: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, operand_a / operand_b};
+        MOD: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, operand_a % operand_b}; 
+	    endcase
+	      //iw_reg[write_pointer] = '{opcode,operand_a,operand_b,rez};   
     end
   // read from the register
   assign instruction_word = iw_reg[read_pointer];  // continuously read from register
