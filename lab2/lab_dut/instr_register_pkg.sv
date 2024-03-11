@@ -1,6 +1,6 @@
 /***********************************************************************
  * A SystemVerilog RTL model of an instruction regisgter:
- * User-defined type definitions
+ * User-defined type definiti
  **********************************************************************/
 package instr_register_pkg;
   timeunit 1ns/1ns;
