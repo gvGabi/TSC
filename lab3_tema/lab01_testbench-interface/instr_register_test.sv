@@ -15,6 +15,7 @@ module instr_register_test
    output opcode_t       opcode,
    output address_t      write_pointer,
    output address_t      read_pointer,
+   output operand_res    exp_res,
    input  instruction_t  instruction_word
   );
 
@@ -22,6 +23,8 @@ module instr_register_test
 
   parameter WRITE_NR = 20;
   parameter READ_NR = 19; //WRITE_NR - 1
+
+  operand_res dut_res;   //variabila pentru rezultatul primit din dut
 
   int seed = 555;
 
@@ -97,12 +100,41 @@ module instr_register_test
     $display("  opcode = %0d (%s)", instruction_word.opc, instruction_word.opc.name);
     $display("  operand_a = %0d",   instruction_word.op_a);
     $display("  operand_b = %0d", instruction_word.op_b);
-    $display("  result = %0d\n", instruction_word.rez);
+    $display("  result = %0d\n", instruction_word.res);
   endfunction: print_results
 
+  always@(instruction_word.res)
+    dut_res = instruction_word.res;
   function void check_results;
   //calculam rezultatul expected in test;  -if else
   //if separat care compara cu rezultatul din dut + mesaj de eroare cu $display
-  endfunction
+    if (instruction_word.opc == ZERO)
+      exp_res = 0;
+    else if (instruction_word.opc == PASSA)
+      exp_res = instruction_word.op_a;
+    else if (instruction_word.opc == PASSB)
+      exp_res = instruction_word.op_b;
+    else if (instruction_word.opc == ADD)
+      exp_res = instruction_word.op_a + instruction_word.op_b;
+    else if (instruction_word.opc == SUB)
+      exp_res = instruction_word.op_a - instruction_word.op_b;
+    else if (instruction_word.opc == MULT)
+      exp_res = instruction_word.op_a * instruction_word.op_b;
+    else if (instruction_word.opc == DIV) begin
+      if (instruction_word.op_b == 0)
+        exp_res = 0;
+      else exp_res = instruction_word.op_a / instruction_word.op_b;
+    end
+    else if (instruction_word.opc == MOD)
+      exp_res = instruction_word.op_a % instruction_word.op_b;
+    else 
+      exp_res = 0; //opcode invalid
+  
+
+    if (exp_res == dut_res)
+      $display("Expected result: %0d.\nReceived result: %0d.\nTest PASSED.\n", exp_res, dut_res);
+    else $display("Expected result: %0d.\nReceived result: %0d.\nTest FAILED.\n", exp_res, dut_res);
+  
+  endfunction: check_results
 
 endmodule: instr_register_test
