@@ -21,21 +21,27 @@ module instr_register_test
 
   timeunit 1ns/1ns;
 
-  parameter WRITE_NR = 20;
-  parameter READ_NR = 19; //WRITE_NR - 1
+  parameter WRITE_NR = 50;
+  parameter READ_NR = WRITE_NR -1; //WRITE_NR - 1
+  //2 parametri noi, WRITE_ORDER, READ_ORDER
+  parameter WRITE_ORDER = 0;  //dupa ma asigur ca merg 7, dupa 50
+  parameter READ_ORDER = 2;
+  //9 cazuri de testare -> i-i,i-r,i-d;r-i,r-r,r-d;d-i,d-r,d-i
 
   operand_res dut_res;   //variabila pentru rezultatul primit din dut
   instruction_t  iw_reg_test [0:31];  // an array of instruction_word structures
 
+  int pass = 0;
+  int fail = 0;
 
   int seed = 555;
 
   initial begin   //la timpul 0 al simularii se executa codul
-    $display("\n\n*************************************************************");
-    $display(    "***  THIS IS A SELF-CHECKING TESTBENCH (YET).  YOU  DON'T ***");
-    $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES       ***");
-    $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION    ***");
-    $display(    "*************************************************************");
+    $display("\n\n***********************************************************");
+    $display(    "***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T    ***");
+    $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES    ***");
+    $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION ***");
+    $display(    "**********************************************************");
 
     $display("\nReseting the instruction register...");
     write_pointer  = 5'h00;         // initialize write pointer
@@ -62,17 +68,26 @@ module instr_register_test
       // later labs will replace this loop with iterating through a
       // scoreboard to determine which addresses were written and
       // the expected values to be read back
-      @(posedge clk) read_pointer = i;
+
+      //@(posedge clk) read_pointer = i;
+      @(posedge clk)
+      case(READ_ORDER)
+        INC: read_pointer = i;
+        RAND: read_pointer = $unsigned($random)%32;
+        DEC: read_pointer = 31-(i%32);
+      endcase
       @(negedge clk) print_results;
       check_results;
     end
 
+    final_report;
+
     @(posedge clk) ;
-    $display("\n*************************************************************");
-    $display(    "***  THIS IS A SELF-CHECKING TESTBENCH (YET).  YOU  DON'T ***");
-    $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES       ***");
-    $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION    ***");
-    $display(    "*************************************************************\n");
+    $display("\n\n***********************************************************");
+    $display(    "***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T    ***");
+    $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES    ***");
+    $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION ***");
+    $display(    "**********************************************************\n");
     $finish;
   end
 
@@ -84,11 +99,19 @@ module instr_register_test
     // addresses of 0, 1 and 2.  This will be replaceed with randomizeed
     // write_pointer values in a later lab
     //
-    static int temp = 0;    // static-e alocata o singura data
-    operand_a     <= $random(seed)%16;                 // between -15 and 15 ->random genereaza pe 32biti;pseudoaleator-algoritm in functie de vendor
-    operand_b     <= $unsigned($random)%16;            // between 0 and 15  ->$unsigned -converteste nr neg in pozitive
-    opcode        <= opcode_t'($unsigned($random)%8);  // between 0 and 7, cast to opcode_t type  ->opcode_t' -cast-conversie de la un tip de date la altul
-    write_pointer <= temp++;    //se asigneaza si dupa de incrementeaza
+
+    static int temp = 0;    // static -> e alocata o singura data
+    static int temp_dec = 31;
+    operand_a     <= $random(seed)%16;                 // between -15 and 15 ->random genereaza pe 32biti; pseudoaleator-algoritm in functie de vendor
+    operand_b     <= $unsigned($random)%16;            // between 0 and 15  -> $unsigned -converteste nr neg in pozitive
+    opcode        <= opcode_t'($unsigned($random)%8);  // between 0 and 7, cast to opcode_t type  -> opcode_t' -cast-conversie de la un tip de date la altul
+    //write_pointer <= temp++;    //se asigneaza si dupa de incrementeaza
+    //write_pointer - 3 cazuri: inc, random, dec
+    case (WRITE_ORDER)    //modificat 25.03
+      INC: write_pointer <= temp++;
+      RAND: write_pointer <= $unsigned($random)%32; 
+      DEC: write_pointer <= temp_dec--;
+    endcase
   endfunction: randomize_transaction
 
   function void print_transaction;
@@ -150,10 +173,20 @@ module instr_register_test
         exp_res = 0;
       else exp_res = instruction_word.op_a % instruction_word.op_b;
   
-    if (exp_res == dut_res)
-      $display("Expected result: %0d.\nReceived result: %0d.\nTest PASSED.\n", exp_res, dut_res);
-    else $display("Expected result: %0d.\nReceived result: %0d.\nTest FAILED.\n", exp_res, dut_res);
-  
+    if (exp_res == dut_res) begin
+      $display("\nExpected result: %0d. Received result: %0d.\nTest PASSED.\n", exp_res, dut_res);
+      pass++;
+    end
+    else begin 
+      $display("\nExpected result: %0d. Received result: %0d.\nTest FAILED.\n", exp_res, dut_res);
+      fail++;
+    end
   endfunction: check_results
+
+  function void final_report;
+    $display("--- FINAL REPORT ---");
+    $display("Operations passed: %0d/%0d.",pass,WRITE_NR);
+    $display("Operations failed: %0d/%0d.",fail,WRITE_NR);
+  endfunction: final_report
 
 endmodule: instr_register_test

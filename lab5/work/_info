@@ -1,0 +1,112 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ggrib/Desktop/TSC_LAB/lab2
+vinstr_register
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 DXx4 work 18 instr_register_pkg 0 22 VEEC@;eacZ6b0zB?0MQ^;3
+Z2 !s110 1711352117
+!i10b 1
+!s100 9>G4CF2IWYUDOWM72>z8O1
+IX^>QijPCFL_Z<z><k;6??1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 instr_register_sv_unit
+S1
+Z4 dC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5
+w1711352105
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register.sv
+L0 9
+Z5 OW;L;10.5c;63
+r1
+!s85 0
+31
+Z6 !s108 1711352117.000000
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register.sv|
+!s101 -O0
+!i113 1
+Z7 o-work work -O0
+Z8 tCvgOpt 0
+Xinstr_register_pkg
+R0
+R2
+!i10b 1
+!s100 j`3;XzV@DjN@D<lc:RAM`1
+IVEEC@;eacZ6b0zB?0MQ^;3
+VVEEC@;eacZ6b0zB?0MQ^;3
+S1
+R4
+w1711349906
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register_pkg.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register_pkg.sv
+L0 5
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register_pkg.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab_dut/instr_register_pkg.sv|
+!s101 -O0
+!i113 1
+R7
+R8
+vinstr_register_test
+R0
+R1
+!s110 1711352120
+!i10b 1
+!s100 4W3G8U6RX@Iib=3alS[lk0
+IG_^=CR7ZH3F^TWdegaA^P2
+R3
+!s105 instr_register_test_sv_unit
+S1
+R4
+w1711352080
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/instr_register_test.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/instr_register_test.sv
+L0 8
+R5
+r1
+!s85 0
+31
+!s108 1711352120.000000
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/instr_register_test.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/instr_register_test.sv|
+!s101 -O0
+!i113 1
+R7
+R8
+vtop
+R0
+R1
+!s110 1711352121
+!i10b 1
+!s100 K=;_B0j91iKzX;T43UMhk2
+I9CCF6MIPG6e=amP:36hCP0
+R3
+!s105 top_sv_unit
+S1
+R4
+w1709535819
+8C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/top.sv
+FC:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/top.sv
+L0 5
+R5
+r1
+!s85 0
+31
+!s108 1711352121.000000
+!s107 C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/top.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/ggrib/Desktop/TSC_LAB/TSC/lab5/lab01_testbench-interface/top.sv|
+!s101 -O0
+!i113 1
+R7
+R8
