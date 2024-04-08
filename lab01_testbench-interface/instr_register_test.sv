@@ -22,8 +22,8 @@ module instr_register_test
   timeunit 1ns/1ns;
 
   parameter WRITE_NR = 50;
-  parameter READ_NR = WRITE_NR -1; //WRITE_NR - 1
-  //2 parametri noi, WRITE_ORDER, READ_ORDER
+  parameter READ_NR = WRITE_NR -1;
+  //2 parametri noi: WRITE_ORDER, READ_ORDER
   parameter WRITE_ORDER = 1;  //dupa ma asigur ca merg 7, dupa 50
   parameter READ_ORDER = 1;
   //9 cazuri de testare -> i-i,i-r,i-d;r-i,r-r,r-d;d-i,d-r,d-i
@@ -189,6 +189,12 @@ module instr_register_test
     $display("--- FINAL REPORT ---");
     $display("Operations passed: %0d/%0d.",pass,WRITE_NR);
     $display("Operations failed: %0d/%0d.",fail,WRITE_NR);
+
+    //fopen ../reports/"regression_status.txt"
+    //$fdisplay("test_name ")
+    //$close file
+
+    //semn result+afisare "?"
   endfunction: final_report
 
 endmodule: instr_register_test
