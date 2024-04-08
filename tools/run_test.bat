@@ -5,4 +5,10 @@ call build.bat
 ::========================================================================================
 cd ../sim
 ::vsim -gui -do run.do
-vsim -c -do run.do
+::vsim -c -do run.do
+
+::adaugare argumente
+::vsim -%5 -do run.do -do "do run.do %1 %2 %3 %4 %5"
+vsim -%5 -do run.do -do "do run.do %1 %2 %3 %4 %5"
+
+cd ../tools
