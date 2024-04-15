@@ -27,14 +27,15 @@ module instr_register_test
   parameter WRITE_ORDER = 1;  //dupa ma asigur ca merg 7, dupa 50
   parameter READ_ORDER = 1;
   //9 cazuri de testare -> i-i,i-r,i-d;r-i,r-r,r-d;d-i,d-r,d-i
-
+  parameter TEST_NAME;
+  parameter SEED_VAL;
   operand_res dut_res;   //variabila pentru rezultatul primit din dut
   instruction_t  iw_reg_test [0:31];  // an array of instruction_word structures
 
   int pass = 0;
   int fail = 0;
 
-  int seed = 555;
+  int seed = SEED_VAL;
 
   initial begin   //la timpul 0 al simularii se executa codul
     $display("\n\n***********************************************************");
@@ -64,7 +65,7 @@ module instr_register_test
     // read back and display same three register locations
     $display("\nReading back the same register locations written...");
     //for (int i=0; i<=2; i++) begin
-    for (int i=0; i<=READ_NR; i++) begin  //modificat in 11.03
+    for (int i=0; i<=READ_NR-1; i++) begin  //modificat in 11.03
       // later labs will replace this loop with iterating through a
       // scoreboard to determine which addresses were written and
       // the expected values to be read back
@@ -186,15 +187,23 @@ module instr_register_test
   endfunction: check_results
 
   function void final_report;
-    $display("--- FINAL REPORT ---");
-    $display("Operations passed: %0d/%0d.",pass,WRITE_NR);
-    $display("Operations failed: %0d/%0d.",fail,WRITE_NR);
+    // $display("--- FINAL REPORT ---");
+    // $display("Operations passed: %0d/%0d.",pass,WRITE_NR);
+    // $display("Operations failed: %0d/%0d.",fail,WRITE_NR);
 
-    //fopen ../reports/"regression_status.txt"
-    //$fdisplay("test_name ")
-    //$close file
-
-    //semn result+afisare "?"
+    int fd;
+    fd = $fopen("../reports/regression_status.txt", "a");
+    if(fail == 0) begin
+      $fdisplay(fd, "%s: PASSED", TEST_NAME);
+      $fdisplay(fd, "Operations passed: %0d/%0d.",pass,WRITE_NR);
+    end
+    else begin
+      $fdisplay(fd, "%s: FAILED", TEST_NAME);
+      $fdisplay(fd, "Operations passed: %0d/%0d.",pass,WRITE_NR);
+    end
+    
   endfunction: final_report
 
 endmodule: instr_register_test
+
+//semn, ridicat la putere, salvare forme de unda, adaugare parametru, comenzi git

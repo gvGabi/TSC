@@ -9,6 +9,6 @@ cd ../sim
 
 ::adaugare argumente
 ::vsim -%5 -do run.do -do "do run.do %1 %2 %3 %4 %5"
-vsim -%5 -do run.do -do "do run.do %1 %2 %3 %4 %5"
+vsim -%5 -do run.do -do "do run.do %1 %2 %3 %4 %6 %7"
 
 cd ../tools

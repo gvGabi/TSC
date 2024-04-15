@@ -1,0 +1,1244 @@
+# 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 09:11:07 on Apr 15,2024
+# vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
+# -- Compiling package instr_register_pkg
+# -- Compiling module instr_register
+# -- Importing package instr_register_pkg
+# -- Compiling module instr_register_test
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 09:11:07 on Apr 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=Case_1 -GWRITE_ORDER=1 -GWRITE_NR=50 -GSEED_VAL=2711255 -GREAD_ORDER=1 -GREAD_NR=50 
+# Start time: 09:11:08 on Apr 15,2024
+# ** Warning: (vsim-3017) ../lab01_testbench-interface/top.sv(24): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab01_testbench-interface/instr_register_test.sv
+# ** Warning: (vsim-3722) ../lab01_testbench-interface/top.sv(24): [TFMPC] - Missing connection for port 'exp_res'.
+# 
+# 
+# ***********************************************************
+# ***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T    ***
+# ***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES    ***
+# ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION ***
+# **********************************************************
+# 
+# Reseting the instruction register...
+# 
+# Writing values to register stack...
+# Writing to register location 19: 
+#   opcode = 4 (SUB)
+#   operand_a = 3
+#   operand_b = 12
+# 
+# Saved data:  opcode = 4 (SUB), operand_a = 3, operand_b = 12.
+# Saved at location 19.
+# 
+# Writing to register location 0: 
+#   opcode = 3 (ADD)
+#   operand_a = -4
+#   operand_b = 12
+# 
+# Saved data:  opcode = 3 (ADD), operand_a = -4, operand_b = 12.
+# Saved at location 0.
+# 
+# Writing to register location 24: 
+#   opcode = 0 (ZERO)
+#   operand_a = -4
+#   operand_b = 3
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = -4, operand_b = 3.
+# Saved at location 24.
+# 
+# Writing to register location 20: 
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = -13, operand_b = 0.
+# Saved at location 20.
+# 
+# Writing to register location 18: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 8
+# 
+# Saved data:  opcode = 4 (SUB), operand_a = 0, operand_b = 8.
+# Saved at location 18.
+# 
+# Writing to register location 4: 
+#   opcode = 2 (PASSB)
+#   operand_a = -8
+#   operand_b = 4
+# 
+# Saved data:  opcode = 2 (PASSB), operand_a = -8, operand_b = 4.
+# Saved at location 4.
+# 
+# Writing to register location 1: 
+#   opcode = 4 (SUB)
+#   operand_a = 4
+#   operand_b = 2
+# 
+# Saved data:  opcode = 4 (SUB), operand_a = 4, operand_b = 2.
+# Saved at location 1.
+# 
+# Writing to register location 25: 
+#   opcode = 1 (PASSA)
+#   operand_a = -14
+#   operand_b = 4
+# 
+# Saved data:  opcode = 1 (PASSA), operand_a = -14, operand_b = 4.
+# Saved at location 25.
+# 
+# Writing to register location 8: 
+#   opcode = 1 (PASSA)
+#   operand_a = 4
+#   operand_b = 1
+# 
+# Saved data:  opcode = 1 (PASSA), operand_a = 4, operand_b = 1.
+# Saved at location 8.
+# 
+# Writing to register location 29: 
+#   opcode = 0 (ZERO)
+#   operand_a = 1
+#   operand_b = 9
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = 1, operand_b = 9.
+# Saved at location 29.
+# 
+# Writing to register location 20: 
+#   opcode = 5 (MULT)
+#   operand_a = 9
+#   operand_b = 8
+# 
+# Saved data:  opcode = 5 (MULT), operand_a = 9, operand_b = 8.
+# Saved at location 20.
+# 
+# Writing to register location 10: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+# Saved data:  opcode = 4 (SUB), operand_a = -8, operand_b = 13.
+# Saved at location 10.
+# 
+# Writing to register location 0: 
+#   opcode = 2 (PASSB)
+#   operand_a = -3
+#   operand_b = 4
+# 
+# Saved data:  opcode = 2 (PASSB), operand_a = -3, operand_b = 4.
+# Saved at location 0.
+# 
+# Writing to register location 11: 
+#   opcode = 0 (ZERO)
+#   operand_a = -12
+#   operand_b = 10
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = -12, operand_b = 10.
+# Saved at location 11.
+# 
+# Writing to register location 0: 
+#   opcode = 3 (ADD)
+#   operand_a = -6
+#   operand_b = 0
+# 
+# Saved data:  opcode = 3 (ADD), operand_a = -6, operand_b = 0.
+# Saved at location 0.
+# 
+# Writing to register location 19: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 11
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = 0, operand_b = 11.
+# Saved at location 19.
+# 
+# Writing to register location 26: 
+#   opcode = 3 (ADD)
+#   operand_a = 11
+#   operand_b = 0
+# 
+# Saved data:  opcode = 3 (ADD), operand_a = 11, operand_b = 0.
+# Saved at location 26.
+# 
+# Writing to register location 19: 
+#   opcode = 2 (PASSB)
+#   operand_a = 0
+#   operand_b = 3
+# 
+# Saved data:  opcode = 2 (PASSB), operand_a = 0, operand_b = 3.
+# Saved at location 19.
+# 
+# Writing to register location 15: 
+#   opcode = 3 (ADD)
+#   operand_a = -13
+#   operand_b = 10
+# 
+# Saved data:  opcode = 3 (ADD), operand_a = -13, operand_b = 10.
+# Saved at location 15.
+# 
+# Writing to register location 6: 
+#   opcode = 7 (MOD)
+#   operand_a = -6
+#   operand_b = 3
+# 
+# Saved data:  opcode = 7 (MOD), operand_a = -6, operand_b = 3.
+# Saved at location 6.
+# 
+# Writing to register location 30: 
+#   opcode = 6 (DIV)
+#   operand_a = 3
+#   operand_b = 15
+# 
+# Saved data:  opcode = 6 (DIV), operand_a = 3, operand_b = 15.
+# Saved at location 30.
+# 
+# Writing to register location 30: 
+#   opcode = 6 (DIV)
+#   operand_a = 15
+#   operand_b = 6
+# 
+# Saved data:  opcode = 6 (DIV), operand_a = 15, operand_b = 6.
+# Saved at location 30.
+# 
+# Writing to register location 11: 
+#   opcode = 6 (DIV)
+#   operand_a = -10
+#   operand_b = 14
+# 
+# Saved data:  opcode = 6 (DIV), operand_a = -10, operand_b = 14.
+# Saved at location 11.
+# 
+# Writing to register location 12: 
+#   opcode = 3 (ADD)
+#   operand_a = 14
+#   operand_b = 14
+# 
+# Saved data:  opcode = 3 (ADD), operand_a = 14, operand_b = 14.
+# Saved at location 12.
+# 
+# Writing to register location 21: 
+#   opcode = 4 (SUB)
+#   operand_a = -2
+#   operand_b = 11
+# 
+# Saved data:  opcode = 4 (SUB), operand_a = -2, operand_b = 11.
+# Saved at location 21.
+# 
+# Writing to register location 23: 
+#   opcode = 5 (MULT)
+#   operand_a = 11
+#   operand_b = 12
+# 
+# Saved data:  opcode = 5 (MULT), operand_a = 11, operand_b = 12.
+# Saved at location 23.
+# 
+# Writing to register location 15: 
+#   opcode = 7 (MOD)
+#   operand_a = -4
+#   operand_b = 5
+# 
+# Saved data:  opcode = 7 (MOD), operand_a = -4, operand_b = 5.
+# Saved at location 15.
+# 
+# Writing to register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = -11
+#   operand_b = 7
+# 
+# Saved data:  opcode = 7 (MOD), operand_a = -11, operand_b = 7.
+# Saved at location 10.
+# 
+# Writing to register location 14: 
+#   opcode = 2 (PASSB)
+#   operand_a = 7
+#   operand_b = 15
+# 
+# Saved data:  opcode = 2 (PASSB), operand_a = 7, operand_b = 15.
+# Saved at location 14.
+# 
+# Writing to register location 8: 
+#   opcode = 6 (DIV)
+#   operand_a = 15
+#   operand_b = 10
+# 
+# Saved data:  opcode = 6 (DIV), operand_a = 15, operand_b = 10.
+# Saved at location 8.
+# 
+# Writing to register location 18: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 14
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = -6, operand_b = 14.
+# Saved at location 18.
+# 
+# Writing to register location 7: 
+#   opcode = 2 (PASSB)
+#   operand_a = 14
+#   operand_b = 8
+# 
+# Saved data:  opcode = 2 (PASSB), operand_a = 14, operand_b = 8.
+# Saved at location 7.
+# 
+# Writing to register location 16: 
+#   opcode = 7 (MOD)
+#   operand_a = -8
+#   operand_b = 2
+# 
+# Saved data:  opcode = 7 (MOD), operand_a = -8, operand_b = 2.
+# Saved at location 16.
+# 
+# Writing to register location 8: 
+#   opcode = 0 (ZERO)
+#   operand_a = -14
+#   operand_b = 7
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = -14, operand_b = 7.
+# Saved at location 8.
+# 
+# Writing to register location 15: 
+#   opcode = 0 (ZERO)
+#   operand_a = -9
+#   operand_b = 0
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = -9, operand_b = 0.
+# Saved at location 15.
+# 
+# Writing to register location 1: 
+#   opcode = 7 (MOD)
+#   operand_a = 0
+#   operand_b = 8
+# 
+# Saved data:  opcode = 7 (MOD), operand_a = 0, operand_b = 8.
+# Saved at location 1.
+# 
+# Writing to register location 15: 
+#   opcode = 1 (PASSA)
+#   operand_a = 8
+#   operand_b = 15
+# 
+# Saved data:  opcode = 1 (PASSA), operand_a = 8, operand_b = 15.
+# Saved at location 15.
+# 
+# Writing to register location 2: 
+#   opcode = 7 (MOD)
+#   operand_a = 15
+#   operand_b = 1
+# 
+# Saved data:  opcode = 7 (MOD), operand_a = 15, operand_b = 1.
+# Saved at location 2.
+# 
+# Writing to register location 21: 
+#   opcode = 2 (PASSB)
+#   operand_a = -15
+#   operand_b = 15
+# 
+# Saved data:  opcode = 2 (PASSB), operand_a = -15, operand_b = 15.
+# Saved at location 21.
+# 
+# Writing to register location 16: 
+#   opcode = 5 (MULT)
+#   operand_a = 15
+#   operand_b = 2
+# 
+# Saved data:  opcode = 5 (MULT), operand_a = 15, operand_b = 2.
+# Saved at location 16.
+# 
+# Writing to register location 2: 
+#   opcode = 0 (ZERO)
+#   operand_a = 2
+#   operand_b = 5
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = 2, operand_b = 5.
+# Saved at location 2.
+# 
+# Writing to register location 20: 
+#   opcode = 2 (PASSB)
+#   operand_a = -11
+#   operand_b = 0
+# 
+# Saved data:  opcode = 2 (PASSB), operand_a = -11, operand_b = 0.
+# Saved at location 20.
+# 
+# Writing to register location 11: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 2
+# 
+# Saved data:  opcode = 4 (SUB), operand_a = 0, operand_b = 2.
+# Saved at location 11.
+# 
+# Writing to register location 0: 
+#   opcode = 3 (ADD)
+#   operand_a = 2
+#   operand_b = 4
+# 
+# Saved data:  opcode = 3 (ADD), operand_a = 2, operand_b = 4.
+# Saved at location 0.
+# 
+# Writing to register location 1: 
+#   opcode = 0 (ZERO)
+#   operand_a = -12
+#   operand_b = 11
+# 
+# Saved data:  opcode = 0 (ZERO), operand_a = -12, operand_b = 11.
+# Saved at location 1.
+# 
+# Writing to register location 20: 
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 0
+# 
+# Saved data:  opcode = 1 (PASSA), operand_a = 11, operand_b = 0.
+# Saved at location 20.
+# 
+# Writing to register location 1: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 1
+# 
+# Saved data:  opcode = 4 (SUB), operand_a = 0, operand_b = 1.
+# Saved at location 1.
+# 
+# Writing to register location 22: 
+#   opcode = 1 (PASSA)
+#   operand_a = -15
+#   operand_b = 4
+# 
+# Saved data:  opcode = 1 (PASSA), operand_a = -15, operand_b = 4.
+# Saved at location 22.
+# 
+# Writing to register location 27: 
+#   opcode = 6 (DIV)
+#   operand_a = -12
+#   operand_b = 1
+# 
+# Saved data:  opcode = 6 (DIV), operand_a = -12, operand_b = 1.
+# Saved at location 27.
+# 
+# Writing to register location 7: 
+#   opcode = 3 (ADD)
+#   operand_a = 1
+#   operand_b = 6
+# 
+# Saved data:  opcode = 3 (ADD), operand_a = 1, operand_b = 6.
+# Saved at location 7.
+# 
+# 
+# Reading back the same register locations written...
+# Read from register location 16: 
+#   opcode = 5 (MULT)
+#   operand_a = 15
+#   operand_b = 2
+#   result = 30
+# 
+# Reading from location 16
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 30. Received result: 30.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 14: 
+#   opcode = 2 (PASSB)
+#   operand_a = 7
+#   operand_b = 15
+#   result = 15
+# 
+# Reading from location 14
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 15. Received result: 15.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 8: 
+#   opcode = 0 (ZERO)
+#   operand_a = -14
+#   operand_b = 7
+#   result = 0
+# 
+# Reading from location 8
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 10: 
+#   opcode = 7 (MOD)
+#   operand_a = -11
+#   operand_b = 7
+#   result = -4
+# 
+# Reading from location 10
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: -4. Received result: -4.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 15: 
+#   opcode = 1 (PASSA)
+#   operand_a = 8
+#   operand_b = 15
+#   result = 8
+# 
+# Reading from location 15
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 8. Received result: 8.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 30: 
+#   opcode = 6 (DIV)
+#   operand_a = 15
+#   operand_b = 6
+#   result = 2
+# 
+# Reading from location 30
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 2. Received result: 2.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 26: 
+#   opcode = 3 (ADD)
+#   operand_a = 11
+#   operand_b = 0
+#   result = 11
+# 
+# Reading from location 26
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 11. Received result: 11.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 22: 
+#   opcode = 1 (PASSA)
+#   operand_a = -15
+#   operand_b = 4
+#   result = -15
+# 
+# Reading from location 22
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: -15. Received result: -15.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 11: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 2
+#   result = -2
+# 
+# Reading from location 11
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: -2. Received result: -2.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 0: 
+#   opcode = 3 (ADD)
+#   operand_a = 2
+#   operand_b = 4
+#   result = 6
+# 
+# Reading from location 0
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 6. Received result: 6.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 28: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 28
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 18: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 14
+#   result = 0
+# 
+# Reading from location 18
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 4: 
+#   opcode = 2 (PASSB)
+#   operand_a = -8
+#   operand_b = 4
+#   result = 4
+# 
+# Reading from location 4
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 4. Received result: 4.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 16: 
+#   opcode = 5 (MULT)
+#   operand_a = 15
+#   operand_b = 2
+#   result = 30
+# 
+# Reading from location 16
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 30. Received result: 30.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 5: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 5
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 8: 
+#   opcode = 0 (ZERO)
+#   operand_a = -14
+#   operand_b = 7
+#   result = 0
+# 
+# Reading from location 8
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 24: 
+#   opcode = 0 (ZERO)
+#   operand_a = -4
+#   operand_b = 3
+#   result = 0
+# 
+# Reading from location 24
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 1: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 1
+#   result = -1
+# 
+# Reading from location 1
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: -1. Received result: -1.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 5: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 5
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 23: 
+#   opcode = 5 (MULT)
+#   operand_a = 11
+#   operand_b = 12
+#   result = 132
+# 
+# Reading from location 23
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 132. Received result: 132.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 14: 
+#   opcode = 2 (PASSB)
+#   operand_a = 7
+#   operand_b = 15
+#   result = 15
+# 
+# Reading from location 14
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 15. Received result: 15.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 18: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 14
+#   result = 0
+# 
+# Reading from location 18
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 28: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 28
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 0: 
+#   opcode = 3 (ADD)
+#   operand_a = 2
+#   operand_b = 4
+#   result = 6
+# 
+# Reading from location 0
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 6. Received result: 6.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 18: 
+#   opcode = 0 (ZERO)
+#   operand_a = -6
+#   operand_b = 14
+#   result = 0
+# 
+# Reading from location 18
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 20: 
+#   opcode = 1 (PASSA)
+#   operand_a = 11
+#   operand_b = 0
+#   result = 11
+# 
+# Reading from location 20
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 11. Received result: 11.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 13: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 13
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 26: 
+#   opcode = 3 (ADD)
+#   operand_a = 11
+#   operand_b = 0
+#   result = 11
+# 
+# Reading from location 26
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 11. Received result: 11.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 7: 
+#   opcode = 3 (ADD)
+#   operand_a = 1
+#   operand_b = 6
+#   result = 7
+# 
+# Reading from location 7
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 7. Received result: 7.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 21: 
+#   opcode = 2 (PASSB)
+#   operand_a = -15
+#   operand_b = 15
+#   result = 15
+# 
+# Reading from location 21
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 15. Received result: 15.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 24: 
+#   opcode = 0 (ZERO)
+#   operand_a = -4
+#   operand_b = 3
+#   result = 0
+# 
+# Reading from location 24
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 13: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 13
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 31: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 31
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 21: 
+#   opcode = 2 (PASSB)
+#   operand_a = -15
+#   operand_b = 15
+#   result = 15
+# 
+# Reading from location 21
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 15. Received result: 15.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 31: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 31
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 15: 
+#   opcode = 1 (PASSA)
+#   operand_a = 8
+#   operand_b = 15
+#   result = 8
+# 
+# Reading from location 15
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 8. Received result: 8.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 16: 
+#   opcode = 5 (MULT)
+#   operand_a = 15
+#   operand_b = 2
+#   result = 30
+# 
+# Reading from location 16
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 30. Received result: 30.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 11: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 2
+#   result = -2
+# 
+# Reading from location 11
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: -2. Received result: -2.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 26: 
+#   opcode = 3 (ADD)
+#   operand_a = 11
+#   operand_b = 0
+#   result = 11
+# 
+# Reading from location 26
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 11. Received result: 11.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 16: 
+#   opcode = 5 (MULT)
+#   operand_a = 15
+#   operand_b = 2
+#   result = 30
+# 
+# Reading from location 16
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 30. Received result: 30.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 3: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 3
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 1: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 1
+#   result = -1
+# 
+# Reading from location 1
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: -1. Received result: -1.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 16: 
+#   opcode = 5 (MULT)
+#   operand_a = 15
+#   operand_b = 2
+#   result = 30
+# 
+# Reading from location 16
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 30. Received result: 30.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 24: 
+#   opcode = 0 (ZERO)
+#   operand_a = -4
+#   operand_b = 3
+#   result = 0
+# 
+# Reading from location 24
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 17: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 17
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 24: 
+#   opcode = 0 (ZERO)
+#   operand_a = -4
+#   operand_b = 3
+#   result = 0
+# 
+# Reading from location 24
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 6: 
+#   opcode = 7 (MOD)
+#   operand_a = -6
+#   operand_b = 3
+#   result = 0
+# 
+# Reading from location 6
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 8: 
+#   opcode = 0 (ZERO)
+#   operand_a = -14
+#   operand_b = 7
+#   result = 0
+# 
+# Reading from location 8
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 11: 
+#   opcode = 4 (SUB)
+#   operand_a = 0
+#   operand_b = 2
+#   result = -2
+# 
+# Reading from location 11
+# Corresponding opcode.
+# Corresponding operand_a.
+# Corresponding operand_b.
+# 
+# Expected result: -2. Received result: -2.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# Read from register location 17: 
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   result = 0
+# 
+# Reading from location 17
+# Wrong opcode.
+# Wrong operand_a.
+# Wrong operand_b.
+# 
+# Expected result: 0. Received result: 0.
+# Test PASSED.
+# 
+# ------------------------------------
+# 
+# 
+# 
+# ***********************************************************
+# ***  THIS IS A SELF-CHECKING TESTBENCH.  YOU  DON'T    ***
+# ***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES    ***
+# ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION ***
+# **********************************************************
+# 
+# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(92)
+#    Time: 1046 ns  Iteration: 1  Instance: /top/test
+# End time: 09:11:08 on Apr 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
